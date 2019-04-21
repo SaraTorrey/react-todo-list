@@ -31,10 +31,15 @@ class App extends Component {
       return todo;
     }) })
   }
+
+  //Delete Todo
+  delTodo = (id) => {
+    console.log(id)
+  }
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+        <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
       </div>
     );
   }
